@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="DISTRICT"content="width=device-width, initial-scale=1.0">
+    <title>DISTRICT VAPE STORE - Portofolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #dc3545;
+            --secondary-color: #343a40;
+            --light-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+        }
+        
+        /* Navbar */
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 2rem;
+            color: var(--primary-color) !important;
+        }
+        
+        .nav-link {
+            font-weight: 600;
+            color: var(--secondary-color) !important;
+            transition: all 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1604917018610-6ec6c131ac71');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0;
+        }
+        
+        /* Product Gallery */
+        .product-card {
+            transition: all 0.3s;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .product-img {
+            height: 200px;
+            object-fit: contain;
+            padding: 15px;
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover .product-img {
+            transform: scale(1.05);
+        }
+        
+        .product-price {
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+            color: white;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        /* Section Titles */
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 40px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="district logo.png" alt="District Vape Logo" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-4">DISTRICT VAPE STORE</h1>
+            <p class="lead mb-5">Premium Vape Products</p>
+            <a href="#products" class="btn btn-danger btn-lg px-4 me-2">View Products</a>
+            <a href="#contact" class="btn btn-outline-light btn-lg px-4">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-12">
+                <h2 class="section-title">OUR PRODUCTS</h2>
+                <p class="mb-5">Discover our premium collection of vape devices and accessories</p>
+            </div>
+        </div>
+            
+            <div class="row">
+                <!-- Ursa Series -->
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="epoch.png" class="card-img-top product-img" alt="Ursa Epoch">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Ursa Epoch</h5>
+                            <p class="text-muted">Advanced Kit</p>
+                            <p class="product-price">Rp 150.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="cap.png" class="card-img-top product-img" alt="Ursa Cap">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Ursa Cap</h5>
+                            <p class="text-muted">Pod System</p>
+                            <p class="product-price">Rp 140.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="nano 3.png" class="card-img-top product-img" alt="Ursa Nano 3">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Ursa Nano 3</h5>
+                            <p class="text-muted">Compact Device</p>
+                            <p class="product-price">Rp 215.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="baby 3.png" class="card-img-top product-img" alt="Ursa Baby 3">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Ursa Baby 3</h5>
+                            <p class="text-muted">Starter Kit</p>
+                            <p class="product-price">Rp 230.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Thelema Series -->
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="thelema ellite.png" class="card-img-top product-img" alt="Thelema Elite">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Thelema Elite</h5>
+                            <p class="text-muted">DNA Mod</p>
+                            <p class="product-price">Rp 290.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="nano.png" class="card-img-top product-img" alt="Thelema Nano">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Thelema Nano</h5>
+                            <p class="text-muted">Compact Mod</p>
+                            <p class="product-price">Rp 310.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="art.png" class="card-img-top product-img" alt="Thelema Art">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Thelema Art</h5>
+                            <p class="text-muted">Designer Mod</p>
+                            <p class="product-price">Rp 230.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Centaurus Series -->
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="centa e40.png" class="card-img-top product-img" alt="Centaurus E40">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Centaurus E40</h5>
+                            <p class="text-muted">Box Mod</p>
+                            <p class="product-price">Rp 295.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="muklay.png" class="card-img-top product-img" alt="Centaurus E40 Muklay">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Centaurus E40 Muklay</h5>
+                            <p class="text-muted">Special Edition</p>
+                            <p class="product-price">Rp 300.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Vaporesso Series -->
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="MINI.png" class="card-img-top product-img" alt="Vaporesso Mini">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Vaporesso Mini</h5>
+                            <p class="text-muted">Compact Device</p>
+                            <p class="product-price">Rp 160.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="nano art.png" class="card-img-top product-img" alt="Vaporesso Nano Art">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Vaporesso Nano Art</h5>
+                            <p class="text-muted">Designer Mod</p>
+                            <p class="product-price">Rp 300.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="vierlette.png" class="card-img-top product-img" alt="Vaporesso Nano Art Vierratale">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Vaporesso Nano Art Vierratale</h5>
+                            <p class="text-muted">Limited Edition</p>
+                            <p class="product-price">Rp 310.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- OXVA Series -->
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="xlim go.png" class="card-img-top product-img" alt="Oxva Xlim Go">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Oxva Xlim Go</h5>
+                            <p class="text-muted">Pod System</p>
+                            <p class="product-price">Rp 195.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="pro 2.png" class="card-img-top product-img" alt="Oxva Xlim Pro 2">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Oxva Xlim Pro 2</h5>
+                            <p class="text-muted">Advanced Pod</p>
+                            <p class="product-price">Rp 320.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="vprime.png" class="card-img-top product-img" alt="Oxva Vprime">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Oxva Vprime</h5>
+                            <p class="text-muted">Premium Mod</p>
+                            <p class="product-price">Rp 400.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="oneo.png" class="card-img-top product-img" alt="Oxva O Neo">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Oxva O Neo</h5>
+                            <p class="text-muted">Pod Mod</p>
+                            <p class="product-price">Rp 260.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="sq pro.png" class="card-img-top product-img" alt="Oxva SQ Pro">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Oxva SQ Pro</h5>
+                            <p class="text-muted">Squonk Mod</p>
+                            <p class="product-price">Rp 320.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="pro touch.png" class="card-img-top product-img" alt="Oxva SQ Pro Touch">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Oxva SQ Pro Touch</h5>
+                            <p class="text-muted">Touch Screen</p>
+                            <p class="product-price">Rp 360.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="treasurehunt.png" class="card-img-top product-img" alt="Oxva SQ Pro Treasure Hunt">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Oxva SQ Pro Treasure Hunt</h5>
+                            <p class="text-muted">Limited Edition</p>
+                            <p class="product-price">Rp 330.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="nexlim.png" class="card-img-top product-img" alt="Oxva Nexlim">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Oxva Nexlim</h5>
+                            <p class="text-muted">Advanced Kit</p>
+                            <p class="product-price">Rp 360.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Voopoo Series -->
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="argus p1.png" class="card-img-top product-img" alt="Voopoo Argus P1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Voopoo Argus P1</h5>
+                            <p class="text-muted">Pod System</p>
+                            <p class="product-price">Rp 270.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="drage60.png" class="card-img-top product-img" alt="Voopoo Drag E60">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Voopoo Drag E60</h5>
+                            <p class="text-muted">Pod Mod</p>
+                            <p class="product-price">Rp 355.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Foom Series -->
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="foom y.png" class="card-img-top product-img" alt="Foom Y">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Foom Y</h5>
+                            <p class="text-muted">Disposable</p>
+                            <p class="product-price">Rp 300.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="foom.png" class="card-img-top product-img" alt="Foom X">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Foom X</h5>
+                            <p class="text-muted">Disposable</p>
+                            <p class="product-price">Rp 200.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="prediksi (2).png" class="card-img-top product-img" alt="Foom X Prediksi">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Foom X Prediksi</h5>
+                            <p class="text-muted">Limited Edition</p>
+                            <p class="product-price">Rp 200.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="signature.png" class="card-img-top product-img" alt="Foom X Signature">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Foom X Signature</h5>
+                            <p class="text-muted">Premium Edition</p>
+                            <p class="product-price">Rp 290.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="model 3.png" class="card-img-top product-img" alt="Foom X Model 3">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Foom X Model 3</h5>
+                            <p class="text-muted">Basic Edition</p>
+                            <p class="product-price">Rp 185.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Caliburn -->
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="caliburn tnet.png" class="card-img-top product-img" alt="Caliburn Tenet">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Caliburn Tenet</h5>
+                            <p class="text-muted">Pod System</p>
+                            <p class="product-price">Rp 340.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hannya -->
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="hannya airtock.png" class="card-img-top product-img" alt="Hannya Airtok">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Hannya Airtok</h5>
+                            <p class="text-muted">Pod Mod</p>
+                            <p class="product-price">Rp 200.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dotmod -->
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="dot mot lite.png" class="card-img-top product-img" alt="Dotmod Lite">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Dotmod Lite</h5>
+                            <p class="text-muted">Compact Mod</p>
+                            <p class="product-price">Rp 200.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="dot mod v2.png" class="card-img-top product-img" alt="Dotmod Aio V2">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Dotmod Aio V2</h5>
+                            <p class="text-muted">All-in-One</p>
+                            <p class="product-price">Rp 1.450.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Joiway -->
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="joiway galaxy.png" class="card-img-top product-img" alt="Joiway Galaxy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Joiway Galaxy</h5>
+                            <p class="text-muted">Disposable</p>
+                            <p class="product-price">Rp 200.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="JOIIWAY BASIC TERBARU.png" class="card-img-top product-img" alt="Joiway">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Joiway</h5>
+                            <p class="text-muted">Basic Model</p>
+                            <p class="product-price">Rp 160.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pulse -->
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="aio v2.png" class="card-img-top product-img" alt="Pulse Aio 5">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Pulse Aio 5</h5>
+                            <p class="text-muted">Squonk Mod</p>
+                            <p class="product-price">Rp 700.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Nova -->
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="nova aio.png" class="card-img-top product-img" alt="Nova Aio">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Nova Aio</h5>
+                            <p class="text-muted">All-in-One</p>
+                            <p class="product-price">Rp 750.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Centaurus AIO -->
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="b80s.png" class="card-img-top product-img" alt="Centaurus AIO B80S">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Centaurus AIO B80S</h5>
+                            <p class="text-muted">Advanced Kit</p>
+                            <p class="product-price">Rp 610.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="g80s.png" class="card-img-top product-img" alt="Centaurus AIO G80S">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Centaurus AIO G80S</h5>
+                            <p class="text-muted">Advanced Kit</p>
+                            <p class="product-price">Rp 600.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mod Paket -->
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="drag3.png" class="card-img-top product-img" alt="Mod Paket Ngebul Drag E">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Mod Paket Ngebul Drag E</h5>
+                            <p class="text-muted">Complete Kit</p>
+                            <p class="product-price">Rp 650.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mod Hannya -->
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="hannya airtock.png" class="card-img-top product-img" alt="Mod Hannya V2">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Mod Hannya V2</h5>
+                            <p class="text-muted">Advanced Mod</p>
+                            <p class="product-price">Rp 590.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mod Panda -->
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="panda v2.png" class="card-img-top product-img" alt="Mod Panda V2">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Mod Panda V2</h5>
+                            <p class="text-muted">Compact Mod</p>
+                            <p class="product-price">Rp 450.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mod Hexohm -->
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="hexohm v3.png" class="card-img-top product-img" alt="Mod Hexohm">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Mod Hexohm</h5>
+                            <p class="text-muted">Premium Mod</p>
+                            <p class="product-price">Rp 3.200.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mod Drag -->
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="drag m100.png" class="card-img-top product-img" alt="Mod Drag M100S">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Mod Drag M100S</h5>
+                            <p class="text-muted">Single Battery</p>
+                            <p class="product-price">Rp 380.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mod Centaurus -->
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="retro game.png" class="card-img-top product-img" alt="Mod Centaurus M200 Retro Game">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Mod Centaurus M200 Retro Game</h5>
+                            <p class="text-muted">Special Edition</p>
+                            <p class="product-price">Rp 580.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="q200.png" class="card-img-top product-img" alt="Mod Centaurus Q200">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Mod Centaurus Q200</h5>
+                            <p class="text-muted">Dual Battery</p>
+                            <p class="product-price">Rp 550.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="m200.png" class="card-img-top product-img" alt="Mod Centaurus M200 New">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Mod Centaurus M200 New</h5>
+                            <p class="text-muted">Updated Version</p>
+                            <p class="product-price">Rp 580.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="m100.png" class="card-img-top product-img" alt="Mod Centaurus M100">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Mod Centaurus M100</h5>
+                            <p class="text-muted">Compact Version</p>
+                            <p class="product-price">Rp 430.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mod Dovpo -->
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="robot edition.png" class="card-img-top product-img" alt="Mod Dovpo MVV2 Robot Edition">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Mod Dovpo MVV2 Robot Edition</h5>
+                            <p class="text-muted">Special Design</p>
+                            <p class="product-price">Rp 400.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="coil.png" class="card-img-top product-img" alt="Mod Dovpo MVV2 Coil Gear">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Mod Dovpo MVV2 Coil Gear</h5>
+                            <p class="text-muted">Special Design</p>
+                            <p class="product-price">Rp 450.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mod R234 -->
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="product-card h-100">
+                        <img src="r234.png" class="card-img-top product-img" alt="Mod R234">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Mod R234</h5>
+                            <p class="text-muted">Mechanical Mod</p>
+                            <p class="product-price">Rp 500.000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0 fade-in">
+                    <img src="logo baru district.png" alt="About Us" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6 fade-in">
+                    <h2 class="section-title">ABOUT US</h2>
+                    <p class="lead">District Vape Store is your premier destination for high-quality vaping products.</p>
+                    <p>We specialize in providing the latest and greatest in vaping technology, from beginner starter kits to advanced mods for experienced vapers. Our knowledgeable staff can help you find the perfect device to suit your needs.</p>
+                    <p>All our products are authentic and come with manufacturer warranties. We pride ourselves on excellent customer service and competitive pricing.</p>
+                    <div class="d-flex align-items-center mt-4">
+                        <div class="me-4">
+                            <h3 class="text-danger">50+</h3>
+                            <p>Premium Products</p>
+                        </div>
+                        <div class="me-4">
+                            <h3 class="text-danger">100%</h3>
+                            <p>Authentic Products</p>
+                        </div>
+                        <div>
+                            <h3 class="text-danger">5★</h3>
+                            <p>Customer Rating</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+<section id="contact" class="py-5 bg-light">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-12">
+                <h2 class="section-title">CONTACT US</h2>
+                <p class="mb-5">Get in touch for product inquiries or wholesale opportunities</p>
+            </div>
+        </div>
+            
+            <div class="row">
+                <div class="col-md-6 mb-4 fade-in">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-map-marker-alt fa-3x text-danger mb-3"></i>
+                            <h4>Our Location</h4>
+                            <p>Jl. Jend Sudirman NO 2 RT 12 Simpang 4 Lengkol Kelurahan Tanjung laut<br>Bontang, East Kalimantan<br>Indonesia</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4 fade-in">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-clock fa-3x text-danger mb-3"></i>
+                            <h4>Business Hours</h4>
+                            <p>Monday - Thursday: 11:00-23:00 WITA<br>
+                            Friday: 14:00-23:00 WITA<br>
+                            Saturday - Sunday: 11:00-23:00 WITA</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4 fade-in">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-phone-alt fa-3x text-danger mb-3"></i>
+                            <h4>Phone</h4>
+                            <p>+62 812 5004 8898</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4 fade-in">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <i class="fab fa-whatsapp fa-3x text-success mb-3"></i>
+                            <h4>WhatsApp</h4>
+                            <p><a href="https://wa.me/6281250048898" class="text-decoration-none">+62 812 5004 8898</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/6281250048898" class="whatsapp-btn d-flex align-items-center justify-content-center">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <img src="logo hitam district.png" alt="District Vape Logo" height="40" class="mb-3">
+            <p class="mb-3">Premium Vape Products & Accessories</p>
+            <div class="social-icons mb-3">
+                <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <p class="mb-0">&copy; 2023 DISTRICT VAPE STORE. All Rights Reserved.</p>
+        </div>
+    </footer
